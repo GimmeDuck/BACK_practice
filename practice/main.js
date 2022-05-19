@@ -1,7 +1,6 @@
-var mysql = require("mysql"); // mysql 모듈을 불러옵니다.
+var mysql = require("mysql");
 
-// 커넥션을 정의합니다.
-// RDS Console 에서 본인이 설정한 값을 입력해주세요.
+// 커넥션 정의
 var connection = mysql.createConnection({
   host: "gimmeduck.cpo9bzxic1on.us-east-1.rds.amazonaws.com",
   user: "admin",
@@ -9,14 +8,14 @@ var connection = mysql.createConnection({
   database: "gimmeduck_db"
 });
 
-// RDS에 접속합니다.
+// RDS 접속
 connection.connect(function(err) {
   if (err) {
-    throw err; // 접속에 실패하면 에러를 throw 합니다.
+    throw err; // 접속 실패 시 에러 throw
   } else {
-    // 접속시 쿼리를 보냅니다.
+    // 접속 시 쿼리 보내기
     connection.query("SELECT * FROM fandom_table", function(err, rows, fields) {
-      console.log(rows); // 결과를 출력합니다!
+      console.log(rows); 
     });
   }
 });
