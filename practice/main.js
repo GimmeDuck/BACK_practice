@@ -2,7 +2,7 @@ var mysql = require("mysql");
 
 // 커넥션 정의
 var connection = mysql.createConnection({
-  host: "gimmeduck.cpo9bzxic1on.us-east-1.rds.amazonaws.com",
+  host: "gimmeduck.crc2drhb9ffk.ap-northeast-2.rds.amazonaws.com",
   user: "admin",
   password: "Lydia41801!A",
   database: "gimmeduck_db"
